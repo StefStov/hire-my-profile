@@ -1,18 +1,14 @@
 <template>
 	<div class="hello">
-		<div class="greeting">
-			<p>{{greeting}}</p>
-		</div>
+		<h1>{{ msg }}</h1>
 	</div>
 </template>
 
 <script>
-	export default {
-		name: 'HelloWorld',
-		data() {
-			return {
-				greeting: "Hello and Welcome!",
-			}
-		},
+export default {
+	name: 'HelloWorld',
+	props: {
+		msg: String
 	}
+}
 </script>

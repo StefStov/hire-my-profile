@@ -1,0 +1,23 @@
+{
+  "name": "hire-my-profile",
+  "version": "1.0.0",
+  "description": "This is how I show my talents ,so you can consider to hire me to create more awesome stuff for your company.",
+  "main": "index.js",
+  "dependencies": {
+    "vue": "^2.6.12"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StefStov/hire-my-profile.git"
+  },
+  "author": "Stefanie Stoverinck",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StefStov/hire-my-profile/issues"
+  },
+  "homepage": "https://github.com/StefStov/hire-my-profile#readme"
+}
