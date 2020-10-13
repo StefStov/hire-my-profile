@@ -1,8 +1,4 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
 import App from './App.vue'
 
-Vue.use(App);
-
-new Vue({
-	//[...]
-})
+createApp(App).mount('#app')
