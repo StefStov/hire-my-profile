@@ -1,11 +1,21 @@
 <template>
 	<div class="menuItems">
-		<img class="code menuItem" alt="code icon" src="@/assets/CodeIcon.png">
-		<img class="languages menuItem" alt="languages icon" src="@/assets/LanguagesIcon.png">
-		<img class="music menuItem" alt="music icon" src="@/assets/MusicIcon.png">
+		<router-link to="/Code" class="code menuItem">
+			<img alt="code icon" src="@/assets/CodeIcon.png">
+		</router-link>
+		<router-link to="/Languages" class="languages menuItem">
+			<img alt="languages icon" src="@/assets/LanguagesIcon.png">
+		</router-link>
+		<router-link to="/Music" class="music menuItem">
+			<img alt="music icon" src="@/assets/MusicIcon.png">
+		</router-link>
 		<img class="profile" alt="profile image" src="@/assets/Profile.png">
-		<img class="hobbies menuItem" alt="hobbies icon" src="@/assets/HobbiesIcon.png">
-		<img class="skills menuItem" alt="skills icon" src="@/assets/SkillIcon.png">
+		<router-link to="/Hobbies" class="hobbies menuItem">
+			<img alt="hobbies icon" src="@/assets/HobbiesIcon.png">
+		</router-link>
+		<router-link to="/Skills" class="skills menuItem">
+			<img alt="skills icon" src="@/assets/SkillIcon.png">
+		</router-link>
 	</div>
 </template>
 
