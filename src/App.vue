@@ -1,17 +1,15 @@
 <template>
-	<div id="app">
-		<Home/>
-	</div>
+	<MenuItems />
 </template>
 
 <script>
-import Home from './components/Home/Home'
-import './main.scss'
+import MenuItems from './components/MenuItems/MenuItems.vue'
+import './App.scss'
 
 export default {
 	name: 'App',
 	components: {
-		Home
+		MenuItems
 	}
 }
 </script>

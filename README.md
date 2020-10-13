@@ -7,9 +7,17 @@ Do the following steps in the terminal.
 
 Step 1
 ```bash
-npm i
+npm install
 ```
-Step 2
+Step 2 for development
 ```bash
-vue serve src/App.vue
+npm run serve
+```
+Step 2 for production
+```bash
+npm run build
+```
+Extra for lints and fixing files
+```bash
+npm run lint
 ```
