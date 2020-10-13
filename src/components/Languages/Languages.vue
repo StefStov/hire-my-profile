@@ -2,7 +2,7 @@
 	<router-link to="/" class="home">
 		<img alt="home page profile image" src="@/assets/Profile.png">
 	</router-link>
-	<div class="codePage">
+	<div class="languagesPage">
 		<div class="blocks">
 			<h3>PHP</h3>
 			<ul>
@@ -58,9 +58,9 @@
 </template>
 
 <script>
-import './Code.scss'
+import './Languages.scss'
 
 export default {
-	name: 'Code',
+	name: 'Languages',
 }
 </script>
