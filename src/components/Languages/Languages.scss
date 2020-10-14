@@ -17,24 +17,22 @@
 	width: 100%;
 	max-width: 1200px;
 	align-self: center;
-	flex-wrap: wrap;
-	margin-top: 220px;
-	justify-content: space-around;
+	justify-content: center;
 
 	.blocks {
-		width: calc(25% - 40px);
-		margin: 0 10px 20px 10px;
-		padding: 20px;
-		border-radius: 10px;
+		width: 100%;
+		max-width: 200px;
+		height: 200px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
 		background-color: rgba($lightPurple, 0.7);
-	}
-}
 
-/* Tablets */
-@media only screen and (max-width: 800px) {
-	.codePage {
-		.blocks {
-			width: calc(50% - 40px);
+		h3, ul{
+			max-width: 100px;
+			text-align: center;
 		}
 	}
 }

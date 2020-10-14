@@ -18,7 +18,7 @@
 	max-width: 1200px;
 	align-self: center;
 	flex-wrap: wrap;
-	margin-top: 220px;
+	margin-top: 20px;
 	justify-content: space-around;
 
 	.blocks {
@@ -32,9 +32,18 @@
 
 /* Tablets */
 @media only screen and (max-width: 800px) {
-	.codePage {
+	.skillsPage {
 		.blocks {
 			width: calc(50% - 40px);
+		}
+	}
+}
+
+/* Mobile */
+@media only screen and (max-width: 750px), (max-height: 500px) {
+	.skillsPage {
+		.blocks {
+			width: calc(100% - 60px);
 		}
 	}
 }

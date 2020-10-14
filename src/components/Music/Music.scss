@@ -16,10 +16,12 @@
 	display: flex;
 	width: 100%;
 	max-width: 1200px;
+	margin-top: 20px;
 	align-self: center;
+	align-items: center;
 	flex-wrap: wrap;
-	margin-top: 220px;
-	justify-content: space-around;
+	justify-content: center;
+	flex-direction: column;
 
 	.blocks {
 		width: calc(25% - 40px);
@@ -32,9 +34,18 @@
 
 /* Tablets */
 @media only screen and (max-width: 800px) {
-	.codePage {
+	.musicPage {
 		.blocks {
-			width: calc(50% - 40px);
+			width: calc(50% - 60px);
+		}
+	}
+}
+
+/* Mobile */
+@media only screen and (max-width: 750px), (max-height: 500px) {
+	.musicPage {
+		.blocks {
+			width: calc(100% - 60px);
 		}
 	}
 }
