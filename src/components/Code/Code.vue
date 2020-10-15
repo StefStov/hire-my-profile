@@ -1,57 +1,12 @@
 <template>
-	<router-link to="/" class="home">
-		<img alt="home page profile image" src="@/assets/Profile.png">
-	</router-link>
+	<HomeLink/>
 	<div class="codePage">
-		<div class="blocks">
-			<h3>PHP</h3>
+		<div v-for="code in codes" :key="code.id" class="blocks">
+			<h3>{{ code.title }}</h3>
 			<ul>
-				<li>WordPress</li>
-				<li>Drupal 7</li>
-				<li>Magento</li>
-				<li>Created my own CMS in PHP</li>
-			</ul>
-		</div>
-		<div class="blocks">
-			<h3>HTML</h3>
-			<ul>
-				<li>WordPress</li>
-				<li>Drupal 7</li>
-				<li>React</li>
-				<li>Vue</li>
-			</ul>
-		</div>
-		<div class="blocks">
-			<h3>CSS/CSS3</h3>
-			<ul>
-				<li>WordPress</li>
-				<li>Drupal 7</li>
-				<li>React</li>
-				<li>Vue</li>
-			</ul>
-		</div>
-		<div class="blocks">
-			<h3>Javascript</h3>
-			<ul>
-				<li>React</li>
-				<li>Vue</li>
-			</ul>
-		</div>
-		<div class="blocks">
-			<h3>Jquery</h3>
-			<ul>
-				<li>WordPress</li>
-				<li>Drupal 7</li>
-				<li>Bootstrap</li>
-			</ul>
-		</div>
-		<div class="blocks">
-			<h3>SCSS</h3>
-			<ul>
-				<li>WordPress</li>
-				<li>Drupal 7</li>
-				<li>Magento</li>
-				<li>Created my own CMS in PHP</li>
+				<li v-for="skill in code.skills" :key="skill.name">
+					{{skill.name}}
+				</li>
 			</ul>
 		</div>
 	</div>
@@ -59,8 +14,15 @@
 
 <script>
 import './Code.scss'
+import HomeLink from "@/components/HomeLink/HomeLink";
 
 export default {
 	name: 'Code',
+	components: {HomeLink},
+	computed: {
+		codes() {
+			return this.$store.state.codes
+		}
+	}
 }
 </script>

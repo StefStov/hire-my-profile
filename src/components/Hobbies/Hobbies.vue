@@ -1,15 +1,12 @@
 <template>
-	<router-link to="/" class="home">
-		<img alt="home page profile image" src="@/assets/Profile.png">
-	</router-link>
+	<HomeLink/>
 	<div class="hobbiesPage">
 		<div class="blocks">
 			<h3>Hobbies</h3>
 			<ul>
-				<li>Walking</li>
-				<li>Gaming</li>
-				<li>Nature</li>
-				<li>Baking</li>
+				<li v-for="hobby in hobbies" :key="hobby.id">
+					{{ hobby.title }}
+				</li>
 			</ul>
 		</div>
 	</div>
@@ -17,8 +14,15 @@
 
 <script>
 import './Hobbies.scss'
+import HomeLink from "@/components/HomeLink/HomeLink";
 
 export default {
 	name: 'Hobbies',
+	components: {HomeLink},
+	computed: {
+		hobbies() {
+			return this.$store.state.hobbies
+		}
+	}
 }
 </script>

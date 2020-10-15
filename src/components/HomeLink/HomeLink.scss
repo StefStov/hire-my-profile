@@ -1,0 +1,11 @@
+.home {
+	position: absolute;
+	top: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+
+	img{
+		width: 100%;
+		max-width: 200px;
+	}
+}

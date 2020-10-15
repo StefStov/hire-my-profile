@@ -1,14 +1,12 @@
 <template>
-	<router-link to="/" class="home">
-		<img alt="home page profile image" src="@/assets/Profile.png">
-	</router-link>
+	<HomeLink/>
 	<div class="languagesPage">
 		<div class="blocks">
 			<h3>Languages</h3>
 			<ul>
-				<li>English</li>
-				<li>German</li>
-				<li>Dutch</li>
+				<li v-for="language in languages" :key="language.id">
+					{{ language.title }}
+				</li>
 			</ul>
 		</div>
 	</div>
@@ -16,8 +14,15 @@
 
 <script>
 import './Languages.scss'
+import HomeLink from "@/components/HomeLink/HomeLink";
 
 export default {
 	name: 'Languages',
+	components: {HomeLink},
+	computed: {
+		languages() {
+			return this.$store.state.languages
+		}
+	}
 }
 </script>

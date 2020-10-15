@@ -1,15 +1,12 @@
 <template>
-	<router-link to="/" class="home">
-		<img alt="home page profile image" src="@/assets/Profile.png">
-	</router-link>
+	<HomeLink/>
 	<div class="skillsPage">
 		<div class="blocks">
 			<h3>Skills</h3>
 			<ul>
-				<li>Sass</li>
-				<li>EDM</li>
-				<li>Drupal</li>
-				<li>Wordpress</li>
+				<li v-for="skill in skills" :key="skill.id">
+					{{ skill.title }}
+				</li>
 			</ul>
 		</div>
 	</div>
@@ -17,8 +14,15 @@
 
 <script>
 import './Skills.scss'
+import HomeLink from "@/components/HomeLink/HomeLink";
 
 export default {
 	name: 'Skills',
+	components: {HomeLink},
+	computed: {
+		skills() {
+			return this.$store.state.skills
+		}
+	}
 }
 </script>

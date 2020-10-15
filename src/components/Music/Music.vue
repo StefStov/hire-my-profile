@@ -1,27 +1,24 @@
 <template>
-	<router-link to="/" class="home">
-		<img alt="home page profile image" src="@/assets/Profile.png">
-	</router-link>
+	<HomeLink/>
 	<div class="musicPage">
-		<div class="blocks">
-			<h3>Focus</h3>
-			<p>Classical music</p>
-		</div>
-		<div class="blocks">
-			<h3>For fun</h3>
-			<p>Metal</p>
-		</div>
-		<div class="blocks">
-			<h3>Relaxing</h3>
-			<p>Jazz</p>
+		<div v-for="type in music" :key="type.id" class="blocks">
+			<h3>{{ type.title }}</h3>
+			<p>{{ type.genre }}</p>
 		</div>
 	</div>
 </template>
 
 <script>
 import './Music.scss'
+import HomeLink from "@/components/HomeLink/HomeLink";
 
 export default {
 	name: 'Music',
+	components: {HomeLink},
+	computed: {
+		music() {
+			return this.$store.state.music
+		}
+	}
 }
 </script>
