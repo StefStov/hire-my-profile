@@ -1,87 +1,146 @@
-.menuItems {
-	position: relative;
-	width: 100%;
+@import "../../styling/Variables";
+
+.wrapper {
 	height: 100%;
+	display: grid;
+	align-items: center;
+	justify-content: center;
 
-	.menuItem {
+	.menuItems {
+		display: inherit;
+		height: auto;
+		width: calc(100% - 40px);
+		max-width: 800px;
+		margin: auto;
+		padding: 0 20px;
+		justify-self: center;
+		grid-template-columns: repeat(6, auto);
+		grid-template-rows: repeat(5, auto);
 
-		img {
-			width: 100%;
+		.menuItem {
+			display: block;
+			border-radius: 50%;
+			text-align: center;
+			position: relative;
+
+			img {
+				width: 100%;
+				max-width: 200px;
+			}
+
+			&:hover {
+				.overlay {
+					opacity: 1;
+				}
+			}
+
+			.overlay {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				height: 100%;
+				max-height: 200px;
+				width: 100%;
+				max-width: 200px;
+				border-radius: 50%;
+				opacity: 0;
+				z-index: 1;
+				transition: .5s ease;
+
+				h1 {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					text-align: center;
+				}
+			}
+
+			&.code {
+				grid-column: 1 / span 2;
+				grid-row: 2 /span 2;
+
+				.overlay {
+					background: $purple;
+				}
+			}
+
+			&.languages {
+				grid-column: 3 / span 2;
+				grid-row: 1 /span 2;
+
+				img {
+					margin-bottom: 20px;
+				}
+
+				.overlay {
+					margin: 0 auto;
+					background: $lightPurple;
+				}
+			}
+
+			&.music {
+				grid-column: 5 / span 2;
+				grid-row: 2 /span 2;
+
+				.overlay {
+					background: $darkPurple;
+				}
+			}
+
+			&.profile {
+				grid-column: 3 / span 2;
+				grid-row: 3 /span 2;
+
+				img {
+					max-width: 250px;
+				}
+
+				.overlay {
+					max-height: 250px;
+					max-width: 250px;
+					background: $gray;
+				}
+			}
+
+			&.hobbies {
+				grid-column: 5 / span 2;
+				grid-row: 4 /span 2;
+
+				.overlay {
+					background: $lightViolet;
+				}
+			}
+
+			&.skills {
+				grid-column: 1 / span 2;
+				grid-row: 4 /span 2;
+
+				.overlay {
+					background: $darkViolet;
+				}
+			}
 		}
-
-		&.code {
-			position: absolute;
-			left: 25%;
-			top: 50%;
-			transform: translate(-100%, -60%);
-		}
-
-		&.languages {
-			position: absolute;
-			left: 50%;
-			top: 25%;
-			transform: translate(-50%, -75%);
-		}
-
-		&.music {
-			position: absolute;
-			right: 25%;
-			top: 50%;
-			transform: translate(100%, -60%);
-		}
-
-		&.hobbies {
-			position: absolute;
-			right: 40%;
-			top: 85%;
-			transform: translate(100%, -50%);
-		}
-
-		&.skills {
-			position: absolute;
-			left: 40%;
-			top: 85%;
-			transform: translate(-100%, -50%);
-		}
-	}
-
-	.profile {
-		position: absolute;
-		left: 50%;
-		top: 55%;
-		transform: translate(-50%, -50%);
-	}
-}
-
-/* Tablets */
-@media only screen and (max-width: 800px) {
-	.menuItem {
-		max-width: 150px;
-	}
-
-	.profile {
-		max-width: 200px;
 	}
 }
 
 /* Mobile */
 @media only screen and (max-width: 750px), (max-height: 500px) {
-	.menuItem {
-		max-width: 80px;
-	}
+	.wrapper {
+		.menuItems {
+			width: calc(100% - 20px);
+			padding: 0 10px;
+			grid-template-rows: repeat(10, auto);
 
-	.profile {
-		max-width: 130px;
-	}
-}
-
-/* small Mobile */
-@media only screen and (max-width: 350px) {
-	.menuItem {
-		max-width: 70px;
-	}
-
-	.profile {
-		max-width: 110px;
+			.menuItem {
+				&.languages {
+					img {
+						margin-bottom: 5px;
+					}
+				}
+			}
+		}
 	}
 }

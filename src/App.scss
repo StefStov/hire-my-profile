@@ -3,12 +3,12 @@
 
 html, body {
 	width: 100%;
-	height: 100%;
 	margin: 0;
+	height: 100%;
 	font-family: 'Open Sans', sans-serif;
 
 	h1 {
-		font-size: 1.125rem;
+		font-size: 1.25rem;
 	}
 
 	h3 {
@@ -32,12 +32,10 @@ html, body {
 	}
 
 	#app {
-		position: fixed;
-		display: flex;
+		display: table;
 		width: 100%;
 		height: 100%;
-		justify-content: center;
 		background-size: cover;
-		background: url("./assets/BackgroundUniverse.jpg") no-repeat center center fixed $black;
+		background: url("./assets/BackgroundUniverse.jpg") repeat center center fixed $black;
 	}
 }

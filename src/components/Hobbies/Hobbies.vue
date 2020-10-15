@@ -1,7 +1,7 @@
 <template>
 	<HomeLink/>
 	<div class="hobbiesPage">
-		<div class="blocks">
+		<div class="block">
 			<h3>Hobbies</h3>
 			<ul>
 				<li v-for="hobby in hobbies" :key="hobby.id">
