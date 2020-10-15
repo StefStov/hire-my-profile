@@ -9,42 +9,48 @@ const store = createStore({
 					link: 'Code',
 					class: 'code',
 					altText: 'code icon',
-					imgPath: 'CodeIcon.png'
+					imgPath: 'CodeIcon.png',
+					text: 'Code'
 				},
 				{
 					id: '1',
 					link: 'Languages',
 					class: 'languages',
 					altText: 'languages icon',
-					imgPath: 'LanguagesIcon.png'
+					imgPath: 'LanguagesIcon.png',
+					text: 'Languages'
 				},
 				{
 					id: '2',
 					link: 'Music',
 					class: 'music',
 					altText: 'music icon',
-					imgPath: 'MusicIcon.png'
+					imgPath: 'MusicIcon.png',
+					text: 'Music'
 				},
 				{
 					id: '3',
 					link: '',
 					class: 'profile',
 					altText: 'home link profile image',
-					imgPath: 'Profile.png'
+					imgPath: 'Profile.png',
+					text: 'Home'
 				},
 				{
 					id: '4',
 					link: 'Hobbies',
 					class: 'hobbies',
 					altText: 'hobbies icon',
-					imgPath: 'HobbiesIcon.png'
+					imgPath: 'HobbiesIcon.png',
+					text: 'Hobbies'
 				},
 				{
 					id: '5',
 					link: 'Skills',
 					class: 'skills',
 					altText: 'skills icon',
-					imgPath: 'SkillIcon.png'
+					imgPath: 'SkillIcon.png',
+					text: 'Skills'
 				}
 			],
 			codes: [

@@ -8,6 +8,9 @@
 				:class="'menuItem ' + menuItem.class"
 			>
 				<img :alt="menuItem.altText" :src="require(`@/assets/${menuItem.imgPath}`)"/>
+				<div class="overlay">
+					<h1>{{ menuItem.text }}</h1>
+				</div>
 			</router-link>
 		</div>
 	</div>
