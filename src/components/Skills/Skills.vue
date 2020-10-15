@@ -1,7 +1,7 @@
 <template>
 	<HomeLink/>
 	<div class="skillsPage">
-		<div class="blocks">
+		<div class="block">
 			<h3>Skills</h3>
 			<ul>
 				<li v-for="skill in skills" :key="skill.id">

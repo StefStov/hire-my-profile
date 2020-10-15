@@ -1,28 +1,25 @@
 @import "../../styling/Variables";
 
 .codePage {
-	display: flex;
-	width: 100%;
-	max-width: 1200px;
-	align-self: center;
-	flex-wrap: wrap;
-	margin-top: 220px;
-	justify-content: space-around;
+	display: grid;
+	margin: 20px 20px 20px;
+	column-gap: 20px;
+	row-gap: 20px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
 
 	.blocks {
-		width: calc(25% - 40px);
-		margin: 0 10px 20px 10px;
+		width: calc(100% - 40px);
 		padding: 20px;
 		border-radius: 10px;
 		background-color: rgba($purple, 0.7);
 	}
 }
 
-/* Tablets */
-@media only screen and (max-width: 800px) {
+/* Mobile */
+@media only screen and (max-width: 750px), (max-height: 500px) {
 	.codePage {
-		.blocks {
-			width: calc(50% - 40px);
-		}
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: repeat(1, 1fr);
 	}
 }

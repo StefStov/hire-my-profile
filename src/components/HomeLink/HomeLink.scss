@@ -1,8 +1,8 @@
 .home {
-	position: absolute;
-	top: 20px;
-	left: 50%;
-	transform: translateX(-50%);
+	display: grid;
+	margin: 20px;
+	align-items: center;
+	justify-items: center;
 
 	img{
 		width: 100%;

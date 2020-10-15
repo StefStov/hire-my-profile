@@ -1,37 +1,23 @@
 @import "../../styling/Variables";
 
 .skillsPage {
-	display: flex;
-	width: 100%;
-	max-width: 1200px;
-	align-self: center;
-	flex-wrap: wrap;
-	margin-top: 20px;
-	justify-content: space-around;
+	display: grid;
+	margin: 20px 20px 20px;
+	row-gap: 20px;
+	justify-content: center;
+	grid-template-columns: repeat(1, 0.3fr);
 
-	.blocks {
-		width: calc(25% - 40px);
-		margin: 0 10px 20px 10px;
+	.block {
+		width: calc(100% - 40px);
 		padding: 20px;
 		border-radius: 10px;
 		background-color: rgba($darkViolet, 0.7);
 	}
 }
 
-/* Tablets */
-@media only screen and (max-width: 800px) {
-	.skillsPage {
-		.blocks {
-			width: calc(50% - 40px);
-		}
-	}
-}
-
 /* Mobile */
 @media only screen and (max-width: 750px), (max-height: 500px) {
 	.skillsPage {
-		.blocks {
-			width: calc(100% - 60px);
-		}
+		grid-template-columns: repeat(1, 1fr);
 	}
 }

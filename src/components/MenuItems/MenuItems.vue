@@ -1,13 +1,15 @@
-<template>
-	<div class="menuItems">
-		<router-link
-			v-for="menuItem in menuItems"
-			:key="menuItem.id"
-			:to="'/' + menuItem.link"
-			:class="'menuItem ' + menuItem.class"
-		>
-			<img :alt="menuItem.altText" :src="require(`@/assets/${menuItem.imgPath}`)" />
-		</router-link>
+<template class="homePage">
+	<div class="wrapper">
+		<div class="menuItems">
+			<router-link
+				v-for="menuItem in menuItems"
+				:key="menuItem.id"
+				:to="'/' + menuItem.link"
+				:class="'menuItem ' + menuItem.class"
+			>
+				<img :alt="menuItem.altText" :src="require(`@/assets/${menuItem.imgPath}`)"/>
+			</router-link>
+		</div>
 	</div>
 </template>
 
