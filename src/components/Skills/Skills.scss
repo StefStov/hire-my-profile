@@ -6,12 +6,33 @@
 	row-gap: 20px;
 	justify-content: center;
 	grid-template-columns: repeat(1, 0.3fr);
+	grid-template-rows: repeat(2, 1fr);
 
 	.block {
 		width: calc(100% - 40px);
 		padding: 20px;
 		border-radius: 10px;
 		background-color: rgba($darkViolet, 0.7);
+
+		&.animation{
+			position: relative;
+
+			.ball{
+				width: 50px;
+				height: 50px;
+				position: absolute;
+				border-radius: 50%;
+				animation: bounce 2s linear 2s infinite alternate;
+			}
+
+			@keyframes bounce {
+				0%   {background-color:$purple; left:0; top:0;}
+				25%  {background-color:$lightPurple; left:calc(50% - 50px); top:calc(100% - 50px);}
+				50%  {background-color:$darkPurple; left:calc(100% - 50px); top:0;}
+				75%  {background-color:$lightViolet; left:calc(50% - 50px); top:calc(100% - 50px);}
+				100% {background-color:$darkViolet; left:0; top:0;}
+			}
+		}
 	}
 }
 
