@@ -6,6 +6,6 @@
 import './App.scss'
 
 export default {
-	name: 'App'
+	name: 'App',
 }
 </script>

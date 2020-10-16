@@ -9,12 +9,15 @@
 				</li>
 			</ul>
 		</div>
+			<div class="block animation">
+				<div class="ball"></div>
+			</div>
 	</div>
 </template>
 
 <script>
 import './Skills.scss'
-import HomeLink from "@/components/HomeLink/HomeLink";
+import HomeLink from "@/components/HomeLink/HomeLink"
 
 export default {
 	name: 'Skills',
